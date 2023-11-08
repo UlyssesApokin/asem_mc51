@@ -1,16 +1,36 @@
-d1 on -> p2:1110 1111 -> EFh
+d1 on -> p1:1110 1111 -> EFh
 
-d2 on & d1 off -> p2:1101 1111b -> DFh
-d3 on & d1 off -> p2:1011 1111b -> BFh
-d4 on & d1 off -> p2:0111 1111b -> 7Fh
+UP STOP dont touch
+d2 on & d1 off -> p1:1101 1111b -> DFh
+d3 on & d1 off -> p1:1011 1111b -> BFh
+d4 on & d1 off -> p1:0111 1111b -> 7Fh
 
-d2 on & d1 on -> p2:1100 1111b -> CFh
-d3 on & d1 on -> p2:1010 1111b -> AFh
-d4 on & d1 on -> p2:0110 1111b -> 6Fh
+UP STOP dont touch
+d2 on & d1 on -> p1:1100 1111b -> CFh
+d3 on & d1 on -> p1:1010 1111b -> AFh
+d4 on & d1 on -> p1:0110 1111b -> 6Fh
 
-UP on -> p1:1111 1110b -> FEh
-STOP on -> p1:1111 1101b -> FDh
-ecw on -> p1:1111 1011b -> FBh
-eccw on -> p1:1111 0111b -> F7h
-conv on -> p1:1110 1111b -> EFh
+UP touch
+d2 on & d1 off -> p1:1101 1110b -> DEh
+d3 on & d1 off -> p1:1011 1110b -> BEh
+d4 on & d1 off -> p1:0111 1110b -> 7Eh
+
+UP touch
+d2 on & d1 on -> p1:1100 1110b -> CEh
+d3 on & d1 on -> p1:1010 1110b -> AEh
+d4 on & d1 on -> p1:0110 1110b -> 6Eh
+
+STOP touch
+d2 on & d1 off -> p1:1101 1101b -> DDh
+d3 on & d1 off -> p1:1011 1101b -> BDh
+d4 on & d1 off -> p1:0111 1101b -> 7Dh
+
+STOP touch
+d2 on & d1 on -> p1:1100 1101b -> CDh
+d3 on & d1 on -> p1:1010 1101b -> ADh
+d4 on & d1 on -> p1:0110 1101b -> 6Dh
+
+ecw on -> p0:1111 1011b -> FBh
+eccw on -> p0:1111 0111b -> F7h
+conv on -> p0:1110 1111b -> EFh
 
